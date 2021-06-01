@@ -1,0 +1,55 @@
+﻿@model Universidade.Models.EstudanteViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div>
+    <h4>Estudante</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SobreNome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SobreNome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DataCriacao)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataCriacao)
+        </dd>
+    </dl>
+    <h5>@Html.DisplayNameFor(model => model.Matriculas)</h5>
+    <div class="row">
+        <table class="table">
+            <tr>
+                <th>Curso</th>
+                <th>Nota</th>
+            </tr>
+            @foreach (var item in Model.Matriculas)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Curso.Titulo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nota)
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    
+</div>
+<div>
+    <a asp-action="Editar" asp-route-id="@Model.EstudanteID">Editar</a> |
+    <a asp-action="Index">Voltar</a>
+</div>

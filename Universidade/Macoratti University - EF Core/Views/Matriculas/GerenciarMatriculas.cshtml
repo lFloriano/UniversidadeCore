@@ -1,0 +1,82 @@
+﻿@model Universidade.Models.GerenciarMatriculasViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+    var selectListEstudantes = (List<SelectListItem>)ViewBag.SelectListEstudantes;
+    var idsEstudantesMatriculados = (string)ViewBag.IdsEstudantesMatriculados;
+}
+
+<h6>Gerenciar Matriculas</h6>
+<hr />
+<form asp-action="GerenciarMatriculas">
+    <div class="row">
+        <div class="col-md-10">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" id="idsEstudantesMatriculados" name="idsEstudantesMatriculados" value="@idsEstudantesMatriculados" />
+            <input type="hidden" asp-for="Curso.CursoID" />
+            <div class="form-group">
+                <dl class="row">
+                    <dt class="col-sm-3">
+                        @Html.DisplayName("Curso")
+                    </dt>
+                    <dd class="col-sm-9">
+                        @Html.DisplayFor(model => model.Curso.Titulo)
+                    </dd>
+                    <dt class="col-sm-3">
+                        @Html.DisplayName("Departamento")
+                    </dt>
+                    <dd class="col-sm-9">
+                        @Html.DisplayFor(model => model.Curso.Departamento.Nome)
+                    </dd>
+                    <dt class="col-sm-3">
+                        @Html.DisplayNameFor(model => model.Curso.LotacaoAlunos)
+                    </dt>
+                    <dd class="col-sm-9">
+                        @Html.DisplayFor(model => model.Curso.LotacaoAlunos)
+                    </dd>
+                    <dt class="col-sm-3">
+                        @Html.DisplayNameFor(model => model.Curso.Creditos)
+                    </dt>
+                    <dd class="col-sm-9">
+                        @Html.DisplayFor(model => model.Curso.Creditos)
+                    </dd>
+                </dl>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h6>
+                Estudantes
+                <div style="float:right;" class="form-check">
+                    <input onchange="ToggleListaAlunosMatriculados(this.checked)" class="form-check-input" type="checkbox" value="" id="ckbMostrarApenasSelecionados">
+                    <label style="font-size: 12px;" class="form-check-label" for="defaultCheck1">
+                        Ver apenas alunos matriculados
+                    </label>
+                </div>
+            </h6>
+            <div id="lgpEstudantes" class="list-group">
+                @foreach (var estudante in selectListEstudantes)
+                {
+                    string estaAtivo = estudante.Selected ? "active" : "";
+                    <a href="#" onclick="AddMatriculasNoInput(this)" data-valor="@estudante.Value" class="list-group-item list-group-item-action @estaAtivo">@estudante.Text</a>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+</form>
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

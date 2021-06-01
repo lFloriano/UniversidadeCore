@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20210528185657_Add campo lotacaoAlunos na tabela de cursos.cs" />
+    <Compile Remove="Migrations\20210528185657_Add campo lotacaoAlunos na tabela de cursos.Designer.cs" />
+    <Compile Remove="Migrations\20210528190613_Add campo lotacaoAlunos na tabela de cursos.cs" />
+    <Compile Remove="Migrations\20210528190613_Add campo lotacaoAlunos na tabela de cursos.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.15" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Universidade.Core\Universidade.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
+</Project>

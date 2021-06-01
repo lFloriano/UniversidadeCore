@@ -1,0 +1,47 @@
+﻿@model Universidade.Models.CursoViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+    var listaDepartamentos = (List<SelectListItem>)ViewBag.SelectListDepartamentos;
+}
+
+<h4>Curso</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="ConfirmarEdicao">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CursoID" />
+            <div class="form-group">
+                <label asp-for="DepartamentoID">Departamento</label>
+                @Html.DropDownList("DepartamentoID", listaDepartamentos, null, new { @class = "form-control", name = "DepartamentoID" })
+            </div>
+            <div class="form-group">
+                <label asp-for="Titulo" class="control-label"></label>
+                <input asp-for="Titulo" class="form-control" />
+                <span asp-validation-for="Titulo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Creditos" class="control-label"></label>
+                <input asp-for="Creditos" class="form-control" />
+                <span asp-validation-for="Creditos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LotacaoAlunos" class="control-label"></label>
+                <input asp-for="LotacaoAlunos" class="form-control" />
+                <span asp-validation-for="LotacaoAlunos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>    
+</div>
+
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Universidade.Models.CursoViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h6>Resumo por Curso</h6>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayName("Curso")
+            </th>
+            <th>
+                @Html.DisplayName("Departamento")
+            </th>
+            <th>
+                @Html.DisplayName("Nº de alunos")
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LotacaoAlunos)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Titulo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Departamento.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantidadeMatriculas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LotacaoAlunos)
+            </td>
+            <td>
+                <a asp-action="GerenciarMatriculas" asp-route-id="@item.CursoID">Gerenciar Matrículas</a> |
+                <a asp-action="Detalhes" asp-route-id="@item.CursoID">Detalhes</a> |
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

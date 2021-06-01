@@ -1,0 +1,9 @@
+C:\Users\55119\Desktop\Laboratorio\Universidade\Universidade.Core\bin\Debug\netcoreapp3.1\Universidade.Core.deps.json
+C:\Users\55119\Desktop\Laboratorio\Universidade\Universidade.Core\bin\Debug\netcoreapp3.1\Universidade.Core.dll
+C:\Users\55119\Desktop\Laboratorio\Universidade\Universidade.Core\bin\Debug\netcoreapp3.1\Universidade.Core.pdb
+C:\Users\55119\Desktop\Laboratorio\Universidade\Universidade.Core\obj\Debug\netcoreapp3.1\Universidade.Core.AssemblyInfoInputs.cache
+C:\Users\55119\Desktop\Laboratorio\Universidade\Universidade.Core\obj\Debug\netcoreapp3.1\Universidade.Core.AssemblyInfo.cs
+C:\Users\55119\Desktop\Laboratorio\Universidade\Universidade.Core\obj\Debug\netcoreapp3.1\Universidade.Core.csproj.CoreCompileInputs.cache
+C:\Users\55119\Desktop\Laboratorio\Universidade\Universidade.Core\obj\Debug\netcoreapp3.1\Universidade.Core.dll
+C:\Users\55119\Desktop\Laboratorio\Universidade\Universidade.Core\obj\Debug\netcoreapp3.1\Universidade.Core.pdb
+C:\Users\55119\Desktop\Laboratorio\Universidade\Universidade.Core\obj\Debug\netcoreapp3.1\Universidade.Core.csprojAssemblyReference.cache

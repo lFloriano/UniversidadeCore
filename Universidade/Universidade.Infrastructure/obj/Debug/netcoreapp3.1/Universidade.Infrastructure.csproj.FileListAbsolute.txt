@@ -1,0 +1,12 @@
+C:\Users\55119\Desktop\Laboratorio\Universidade\Universidade.Infrastructure\obj\Debug\netcoreapp3.1\Universidade.Infrastructure.csprojAssemblyReference.cache
+C:\Users\55119\Desktop\Laboratorio\Universidade\Universidade.Infrastructure\obj\Debug\netcoreapp3.1\Universidade.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\55119\Desktop\Laboratorio\Universidade\Universidade.Infrastructure\obj\Debug\netcoreapp3.1\Universidade.Infrastructure.AssemblyInfo.cs
+C:\Users\55119\Desktop\Laboratorio\Universidade\Universidade.Infrastructure\obj\Debug\netcoreapp3.1\Universidade.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\55119\Desktop\Laboratorio\Universidade\Universidade.Infrastructure\bin\Debug\netcoreapp3.1\Universidade.Infrastructure.deps.json
+C:\Users\55119\Desktop\Laboratorio\Universidade\Universidade.Infrastructure\bin\Debug\netcoreapp3.1\Universidade.Infrastructure.dll
+C:\Users\55119\Desktop\Laboratorio\Universidade\Universidade.Infrastructure\bin\Debug\netcoreapp3.1\Universidade.Infrastructure.pdb
+C:\Users\55119\Desktop\Laboratorio\Universidade\Universidade.Infrastructure\bin\Debug\netcoreapp3.1\Universidade.Core.dll
+C:\Users\55119\Desktop\Laboratorio\Universidade\Universidade.Infrastructure\bin\Debug\netcoreapp3.1\Universidade.Core.pdb
+C:\Users\55119\Desktop\Laboratorio\Universidade\Universidade.Infrastructure\obj\Debug\netcoreapp3.1\Universidade.Infrastructure.csproj.CopyComplete
+C:\Users\55119\Desktop\Laboratorio\Universidade\Universidade.Infrastructure\obj\Debug\netcoreapp3.1\Universidade.Infrastructure.dll
+C:\Users\55119\Desktop\Laboratorio\Universidade\Universidade.Infrastructure\obj\Debug\netcoreapp3.1\Universidade.Infrastructure.pdb

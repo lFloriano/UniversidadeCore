@@ -1,0 +1,61 @@
+﻿@model Universidade.Models.GerenciarMatriculasViewModel
+
+@{
+}
+
+<h6>Matrículas do Curso</h6>
+<hr />
+<div class="row">
+    <div class="col-md-8">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <dl class="row">
+                <dt class="col-sm-3">
+                    @Html.DisplayName("Curso")
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Curso.Titulo)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayName("Departamento")
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Curso.Departamento.Nome)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Curso.LotacaoAlunos)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Curso.LotacaoAlunos)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Curso.Creditos)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Curso.Creditos)
+                </dd>
+            </dl>
+        </div>
+    </div>
+    
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h6>
+            Estudantes Matriculados
+        </h6>
+        <ul class="list-group">
+            @foreach (var matricula in Model.Matriculas)
+            {
+                <li class="list-group-item list-group-item-action">@matricula.Estudante.NomeCompleto</li>
+            }
+        </ul>
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
